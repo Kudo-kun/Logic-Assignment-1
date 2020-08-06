@@ -1,5 +1,5 @@
-#include<bits/stdc++.h> 
-#include"Postfix_Generator.h"
+#include <bits/stdc++.h> 
+#include "Postfix_Generator.hpp"
 using namespace std;
 
 
@@ -22,7 +22,11 @@ class Node
          * Constructor
          */
         Node(char x)                                               
-        { data = x; left = NULL; right = NULL; }                   
+        { 
+            data = x; 
+            left = NULL; 
+            right = NULL; 
+        }                   
 };
 
 

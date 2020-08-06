@@ -1,7 +1,6 @@
-#include"B_classes.h"
-#include"Validity_Support_Functions.h"
-#include"Line_Validity.h"
-#define endl '\n'
+#include "B_classes.hpp"
+#include "Validity_Support_Functions.hpp"
+#include "Line_Validity.hpp"
 
 /**
  * input number of arguments;
@@ -26,11 +25,11 @@ int main()
     for(int i = 0; i < m; i++)                                          
         if(!LineValidity(args, op[i], i))                              
         {
-            cout << "NOT VALID!" << endl;
+            cout << "NOT VALID!" << '\n';
             return 0;
         }
     
-    cout << "VALID!" << endl;
+    cout << "VALID!" << '\n';
     return 0;
 }
 

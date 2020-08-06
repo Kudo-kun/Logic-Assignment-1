@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>   
+#include <bits/stdc++.h>   
 using namespace std;
 
 class Node
@@ -11,12 +11,15 @@ class Node
     public:
         char data;                                                  
         Node* left, *right;                                         
-        
         /**
          * Constructor
          */
         Node(char x)                                               
-        { data = x; left = NULL; right = NULL; }                   
+        { 
+            data = x;
+            left = NULL; 
+            right = NULL; 
+        }                   
 };
 
 
@@ -50,7 +53,6 @@ class Tree
             {
                 if((*pos) -> data == '~')                                          
                     AppendLeaf(ch, &((*pos) -> right), appended);                    
-
                 else if((*pos) -> data  != '~' && isOperator((*pos) -> data))       
                 {
                     AppendLeaf(ch, &((*pos) -> right), appended);                   

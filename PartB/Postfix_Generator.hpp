@@ -1,4 +1,4 @@
-#include<bits/stdc++.h> 
+#include <bits/stdc++.h> 
 using namespace std;
 
 /**
@@ -6,10 +6,7 @@ using namespace std;
  */
 int isOperator(char x)
 {
-    if(x == '~' || x == 'V' || x == '^' || x == '>')
-        return 1;
-    else
-        return 0;
+    return (x == '~' || x == 'V' || x == '^' || x == '>');
 }
 
 /**
@@ -50,7 +47,8 @@ void GetPostfix(string infix, string *postfix, string *op, int l)
         else if(infix[i] == ')')
         {
             bracket--;
-            *postfix += stk.top(); stk.pop();
+            *postfix += stk.top(); 
+            stk.pop();
         } 
         i++;
     }

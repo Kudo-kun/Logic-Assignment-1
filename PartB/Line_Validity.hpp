@@ -1,4 +1,4 @@
-#include<bits/stdc++.h> 
+#include <bits/stdc++.h> 
 using namespace std;
 
 /**
@@ -56,7 +56,7 @@ int LineValidity(string args[], string op, int index)
         getOpPos(args[index]);
         p = ConvertToDec(op, 4);
         if((op[2] == '1' && check(args[index], args[p.second - 1], 1) && (args[p.second-1].length() == cnt)) || (op[2] == '2' && check(args[index], args[p.second - 1], 2) && (args[p.second - 1].length() == (args[index].length() - cnt - 1))))
-                return 1;
+            return 1;
     }
 
     /**

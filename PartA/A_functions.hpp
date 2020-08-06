@@ -1,21 +1,19 @@
-#include<bits/stdc++.h>   
+#include <bits/stdc++.h>   
 using namespace std;
 
 /**
  * ind - index varible;
  * postfix - a string to hold the postfix noation of given string;
  */
-int ind = 0; string postfix;
+int ind = 0;
+string postfix;
 
 /**
  * The following function checks if the given character is a an Operator, i.e, (^, V, >, ~) 
  */
 int isOperator(char x)                                                     
 {
-    if(x == '~' || x == 'V' || x == '^' || x == '>')
-        return 1;
-    else
-        return 0;
+    return (x == '~' || x == 'V' || x == '^' || x == '>');
 }
 
 /**
@@ -29,9 +27,6 @@ void GetPostfix(string infix, int l)
      */
     stack<char> stk;                                                
     int bracket = 0;       
-
-
-
     /**
      * if an opening parentheses is encountered;
      * increment bracket count; 
@@ -43,18 +38,19 @@ void GetPostfix(string infix, int l)
      * decrement the number of brackets and;
      * append the last operator form the stack; 
      */
-    for(int i = 0; i < l; i++)
+    for(auto it : infix)
     {
-        if(infix[i] == '(')                                         
+        if(it == '(')                                         
             bracket++;                                                                                        
-        else if(isalpha(infix[i]) && infix[i] != 'V')               
-            postfix += infix[i];                                    
-        else if(isOperator(infix[i]))                               
-            stk.push(infix[i]);                                     
-        else if(infix[i] == ')')                                    
+        else if(isalpha(it) && it != 'V')               
+            postfix += it;                                    
+        else if(isOperator(it))                               
+            stk.push(it);                                     
+        else if(it == ')')                                    
         {
             bracket--;                                              
-            postfix += stk.top(); stk.pop();                                 
+            postfix += stk.top(); 
+            stk.pop();                                 
         }  
     }
 }

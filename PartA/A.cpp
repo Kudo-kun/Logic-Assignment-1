@@ -1,7 +1,5 @@
-#include"A_functions.h"
-#include"A_classes.h" 
-#define endl '\n'
-#define ll long long int
+#include "A_functions.hpp"
+#include "A_classes.hpp" 
 
 /**
  * create a root node;
@@ -20,16 +18,17 @@ int main()
     
     cin >> infix;                                                           
     GetPostfix(infix, infix.length());                                      
-    cout << "Postfix of given string is: " << postfix << endl;
+    cout << "Postfix of given string is: " << postfix << '\n';
      
     for(int i = postfix.length() - 1; i >= 0; i--)                          
     {
-      int appended = 0;                                                     
-      nt -> AppendLeaf(postfix[i], &root, &appended);                      
+        int appended = 0;                                                     
+        nt -> AppendLeaf(postfix[i], &root, &appended);                      
     }
     
     cout << "Inorder Traversal of the parse tree is: ";
-    nt -> Traversal(&root); cout << endl;                                   
+    nt -> Traversal(&root); 
+    cout << '\n';                                   
     return 0;
 }
 
