@@ -1,7 +1,6 @@
 #include"B_classes.h"
 #include"Validity_Support_Functions.h"
 #include"Line_Validity.h"
-#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl '\n'
 
 /**
@@ -15,8 +14,8 @@
  */
 int main()
 {
-    IOS;
-    int m; cin >> m;                                                    
+    int m; 
+    cin >> m;                                                    
     string tmp, args[m], op[m];                                         
     for(int i = 0; i < m; i++)
     {
