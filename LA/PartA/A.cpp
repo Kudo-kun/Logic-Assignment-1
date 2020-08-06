@@ -1,6 +1,5 @@
 #include"A_functions.h"
 #include"A_classes.h" 
-#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #define endl '\n'
 #define ll long long int
 
@@ -14,8 +13,7 @@
  * traversing the tree in an inorder fashion, to get required result;
  */
 int main()
-{
-    IOS;        
+{      
     Node* root = NULL;                                                      
     Tree* nt = new Tree();                                                  
     string infix;                                                           
