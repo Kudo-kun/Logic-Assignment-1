@@ -24,13 +24,12 @@ int main()
     }
     
     for(int i = 0; i < m; i++)                                          
-    {
         if(!LineValidity(args, op[i], i))                              
         {
             cout << "NOT VALID!" << endl;
             return 0;
         }
-    }
+    
     cout << "VALID!" << endl;
     return 0;
 }
